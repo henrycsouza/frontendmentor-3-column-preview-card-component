@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--Very-light-gray);
+  font-size: 15px;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  overflow: auto;
+  color: var(--Transparent-white);
+}
+
+/* Style cards */
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+article {
+  max-width: 278px;
+  height: 450px;
+  padding: 42px;
+  position: relative;
+}
+
+article.sedan {
+  background-color: var(--Bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+
+article.suv {
+  background-color: var(--Dark-cyan);
+}
+
+article.luxury {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+img {
+  margin-bottom: 36px;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--Very-light-gray);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+article p {
+  color: var(--Very-light-gray);
+  font-size: 13px;
+  line-height: 1.5rem;
+}
+
+button {
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  padding: 14px;
+  width: 146px;
+  border-radius: 30px;
+  border: 2px solid var(--Very-light-gray);
+  outline: none;
+  font-family: inherit;
+  transition: all 0.3s ease-in-out;
+  bottom: 42px;
+}
+
+
+.sedan button {
+  background-color: var(--Very-light-gray);
+  color: var(--Bright-orange);
+}
+
+.suv button {
+  background-color: var(--Very-light-gray);
+  color: var(--Dark-cyan);
+}
+
+.luxury button {
+  background-color: var(--Very-light-gray);
+  color: var(--Dark-cyan);
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--Very-light-gray);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.info {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  color: var(--Very-light-gray);
+  bottom: 10px;
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: center;
+}
+
+.info a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.info a:hover {
+  color: var(--Transparent-white);
+}
+
+@media only screen and (max-width: 844px){
+  body{
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+    flex-wrap: wrap;
+  }
+
+  main{
+    padding: 50px 0;
+    flex-direction: column;
+  }
+
+  article.sedan{
+    border-radius: 10px 10px 0 0;
+  }
+
+  article.luxury{
+    border-radius: 0 0 10px 10px;
+  }
+
+  article p{
+    font-size: 0.77rem;
+  }
+
+  .info{
+    position: relative;
+    width: auto;
+    padding-bottom:10px;
+  }
+}
